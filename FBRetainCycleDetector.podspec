@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FBRetainCycleDetector'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary      = "Library that helps with detecting retain cycles in iOS apps"
 
 # This description is used to generate tags and improve search results.

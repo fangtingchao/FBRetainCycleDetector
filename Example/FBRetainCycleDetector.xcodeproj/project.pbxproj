@@ -470,7 +470,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBRetainCycleDetector/FBRetainCycleDetector-Prefix.pch";
 				INFOPLIST_FILE = "FBRetainCycleDetector/FBRetainCycleDetector-Info.plist";
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.2;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yivo.text;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -488,7 +488,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FBRetainCycleDetector/FBRetainCycleDetector-Prefix.pch";
 				INFOPLIST_FILE = "FBRetainCycleDetector/FBRetainCycleDetector-Info.plist";
-				MARKETING_VERSION = 0.1.1;
+				MARKETING_VERSION = 0.1.2;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yivo.text;
 				PRODUCT_NAME = "$(TARGET_NAME)";
