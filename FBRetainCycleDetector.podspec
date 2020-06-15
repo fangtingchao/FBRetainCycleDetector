@@ -29,32 +29,32 @@ Pod::Spec.new do |s|
   s.source_files  = "FBRetainCycleDetector", "{FBRetainCycleDetector,rcd_fishhook}/**/*.{h,m,mm,c}"
 
   mrr_files = [
-    'FBRetainCycleDetector/Associations/FBAssociationManager.h',
-    'FBRetainCycleDetector/Associations/FBAssociationManager.mm',
-    'FBRetainCycleDetector/Layout/Blocks/FBBlockStrongLayout.h',
-    'FBRetainCycleDetector/Layout/Blocks/FBBlockStrongLayout.m',
-    'FBRetainCycleDetector/Layout/Blocks/FBBlockStrongRelationDetector.h',
-    'FBRetainCycleDetector/Layout/Blocks/FBBlockStrongRelationDetector.m',
-    'FBRetainCycleDetector/Layout/Classes/FBClassStrongLayoutHelpers.h',
-    'FBRetainCycleDetector/Layout/Classes/FBClassStrongLayoutHelpers.m',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Associations/FBAssociationManager.h',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Associations/FBAssociationManager.mm',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Layout/Blocks/FBBlockStrongLayout.h',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Layout/Blocks/FBBlockStrongLayout.m',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Layout/Blocks/FBBlockStrongRelationDetector.h',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Layout/Blocks/FBBlockStrongRelationDetector.m',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Layout/Classes/FBClassStrongLayoutHelpers.h',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Layout/Classes/FBClassStrongLayoutHelpers.m',
   ]
 
-  files = Pathname.glob("FBRetainCycleDetector/**/*.{h,m,mm}")
+  files = Pathname.glob("FBRetainCycleDetector/Classes/FBRetainCycleDetector/**/*.{h,m,mm}")
   files = files.map {|file| file.to_path}
   files = files.reject {|file| mrr_files.include?(file)}
 
   s.requires_arc = files.sort + [
-    'rcd_fishhook/**/*.{c,h}'
+    'FBRetainCycleDetector/Classes/fishhook/**/*.{c,h}'
   ]
   s.public_header_files = [
-    'FBRetainCycleDetector/Detector/FBRetainCycleDetector.h',
-    'FBRetainCycleDetector/Associations/FBAssociationManager.h',
-    'FBRetainCycleDetector/Graph/FBObjectiveCBlock.h',
-    'FBRetainCycleDetector/Graph/FBObjectiveCGraphElement.h',
-    'FBRetainCycleDetector/Graph/Specialization/FBObjectiveCNSCFTimer.h',
-    'FBRetainCycleDetector/Graph/FBObjectiveCObject.h',
-    'FBRetainCycleDetector/Graph/FBObjectGraphConfiguration.h',
-    'FBRetainCycleDetector/Filtering/FBStandardGraphEdgeFilters.h',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Detector/FBRetainCycleDetector.h',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Associations/FBAssociationManager.h',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Graph/FBObjectiveCBlock.h',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Graph/FBObjectiveCGraphElement.h',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Graph/Specialization/FBObjectiveCNSCFTimer.h',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Graph/FBObjectiveCObject.h',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Graph/FBObjectGraphConfiguration.h',
+    'FBRetainCycleDetector/Classes/FBRetainCycleDetector/Filtering/FBStandardGraphEdgeFilters.h',
   ]
 
   s.framework = "Foundation", "CoreGraphics", "UIKit"
