@@ -17,7 +17,7 @@ FBRetainCycleDetector is available through [CocoaPods](https://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'FBRetainCycleDetector'
+pod 'FBRetainCycleDetector',:git=>'https://github.com/fangtingchao/FBRetainCycleDetector.git'
 ```
 
 ## Author
