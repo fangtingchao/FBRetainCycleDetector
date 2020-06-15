@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'FBRetainCycleDetector_Example' do
+  pod 'FBRetainCycleDetector', :path => '../'
+
+  target 'FBRetainCycleDetector_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
